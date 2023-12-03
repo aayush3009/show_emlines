@@ -10,15 +10,15 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'your_script = your_script:main',
+            'your_script = show_lines.py:main',
         ],
     },
-    author='Your Name',
-    author_email='your.email@example.com',
+    author='Aayush Saxena',
+    author_email='aayush.saxena3009@gmail.com',
     description='Python module for overplotting emission lines on plots',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/yourusername/show-emlines',
+    url='https://github.com/aayush3009/show_emlines',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
