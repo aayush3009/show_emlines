@@ -7,7 +7,7 @@ import matplotlib.colors as colors
 ### LIST OF EMISSION LINES APPROPRIATE FOR VARIOUS SOURCES
 
 ### SDSS line list
-with open("./sdss_lines/emission_lines_sdss.txt", 'r') as f:
+with open("sdss_lines/emission_lines_sdss.txt", 'r') as f:
     emlines=[line.split() for line in f]
 
 sdss_wave = []
@@ -18,7 +18,7 @@ for i in range(len(emlines)):
 
 
 ### SDSS absorption line list
-with open("./sdss_lines/absorption_lines_sdss.txt", 'r') as f:
+with open("sdss_lines/absorption_lines_sdss.txt", 'r') as f:
     ablines=[line.split() for line in f]
 
 sdss_wave = []
