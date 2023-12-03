@@ -6,6 +6,12 @@ This Python module, named `show_emlines.py`, provides functions for overplotting
 
 To use this module, simply download the `show_emlines.py` file and place it in your project directory.
 
+To install via pip,
+
+```
+pip install git+https://github.com/aayush3009/show-emlines.git
+```
+
 ## Usage
 
 Import the module in your Python script or Jupyter notebook:
