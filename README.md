@@ -1,6 +1,8 @@
+Certainly! Here's the updated README with the new package name:
+
 # Emission Lines Overplotter
 
-This Python module provides functions for overplotting emission lines on plots using Matplotlib. It includes predefined lists of emission lines appropriate for various sources, making it convenient for astronomers and researchers working with spectroscopic data.
+This Python module, named `show_emlines.py`, provides functions for overplotting emission lines on plots using Matplotlib. It includes predefined lists of emission lines appropriate for various sources, making it convenient for astronomers and researchers working with spectroscopic data.
 
 ## Installation
 
@@ -11,7 +13,7 @@ To use this module, simply download the `show_emlines.py` file and place it in y
 Import the module in your Python script or Jupyter notebook:
 
 ```python
-from emission_lines_overplotter import *
+from show_emlines import *
 ```
 
 ### Predefined Emission Line Lists
