@@ -7,29 +7,26 @@ import matplotlib.colors as colors
 ### LIST OF EMISSION LINES APPROPRIATE FOR VARIOUS SOURCES
 
 ### SDSS line list
-with open("sdss_lines/emission_lines_sdss.txt", 'r') as f:
-    emlines=[line.split() for line in f]
+sdss_wave = [ 1033.82 ,  1215.24 ,  1240.81 ,  1305.53 ,  1335.31 ,  1397.61 ,
+        1399.8  ,  1549.48 ,  1640.4  ,  1665.85 ,  1857.4  ,  1908.734,
+        2439.5  ,  2799.117,  3346.79 ,  3426.85 ,  3727.092,  3729.875,
+        3868.76 ,  3967.47 ,  3889.   ,  4102.89 ,  4341.68 ,  4364.436,
+        4862.68 ,  4932.603,  4960.295,  5008.24 ,  6302.046,  6365.536,
+        6549.86 ,  6564.61 ,  6585.27 ,  6718.29 ,  6732.67 ,  7155.157,
+        7319.99 ,  7330.73 ,  9068.6  ,  9531.1  , 10049.368]
 
-sdss_wave = []
-sdss_name = []
-for i in range(len(emlines)):
-    sdss_wave.append(float(emlines[i][0]))
-    sdss_name.append(emlines[i][3])
+sdss_name = ['OVI','Ly$\\alpha$','NV','OI','CII','SiIV','SiIV+OIV','CIV','HeII','OIII]','AlIII','CIII]',
+'[NeIV]','MgII]','[NeV]','[NeV]','[OII]','[OII]','[NeIII]','[NeIII]','HeI','H$\\delta$','H$\\gamma$','[OIII]',
+'H$\\beta$','[OIII]','[OIII]','[OIII]','[OI]','[OI]','[NII]','H$\\alpha$','[NII]','[SII]','[SII]',
+'[FeII]','[OII]','[OII]','[SIII]','[SIII]','Pad']
 
+### SDSS Absorption line list
 
-### SDSS absorption line list
-with open("sdss_lines/absorption_lines_sdss.txt", 'r') as f:
-    ablines=[line.split() for line in f]
+sdss_wave_ab = [3934.777, 3969.588, 4305.61 , 5176.7  , 5895.6  , 8500.36 ,
+       8544.44 , 8664.52 ]
 
-sdss_wave = []
-sdss_name = []
-for i in range(len(ablines)):
-    sdss_wave.append(float(ablines[i][0]))
-    sdss_name.append(ablines[i][3])
+sdss_name_ab = ['K', 'H', 'G', 'Mg', 'Na', 'CaII', 'CaII', 'CaII']
 
-
-    
-sdss_wave = np.array(sdss_wave)
 
 ### Emission line library with rest-frame vacuum wavelengths (taken from: http://astronomy.nmsu.edu/drewski/tableofemissionlines.html) and other sources
 lines_all = [1215.7, 1240.8, 1549., 1640., 1660., 1666., 1909., 2800., 2945., 3645., 3727., 
