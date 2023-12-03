@@ -4,7 +4,7 @@ This Python module provides functions for overplotting emission lines on plots u
 
 ## Installation
 
-To use this module, simply download the `emission_lines_overplotter.py` file and place it in your project directory.
+To use this module, simply download the `show_emlines.py` file and place it in your project directory.
 
 ## Usage
 
