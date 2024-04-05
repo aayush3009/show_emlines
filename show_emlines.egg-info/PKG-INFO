@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: show-emlines
+Version: 0.1.0
+Summary: Python module for overplotting emission lines on plots
+Home-page: https://github.com/yourusername/show-emlines
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+# Emission Lines Overplotter
+
+This Python module, named `show_emlines.py`, provides functions for overplotting emission lines on plots using Matplotlib. It includes predefined lists of emission lines appropriate for various sources, making it convenient for astronomers and researchers working with spectroscopic data.
+
+## Installation
+
+To use this module, simply download the `show_emlines.py` file and place it in your project directory.
+
+## Usage
+
+Import the module in your Python script or Jupyter notebook:
+
+```python
+from show_emlines import *
+```
+
+### Predefined Emission Line Lists
+
+The module includes predefined lists of emission lines appropriate for various sources, such as SDSS, common emission lines, and specific studies. These lists are loaded from external text files.
+
+### Functions
+
+#### `show_lines(lines, names, z, c='k', min_wave=0.6e4, max_wave=5.3e4, ypos=2.2e-20, xoffset=0.02e4, lnames=False, alpha=0.5, fontsize=8)`
+
+Displays emission lines on a plot, accounting for redshift `z`. Customize line appearance and annotation options.
+
+#### `show_lines_LA7(lines, names, z, c='k', alpha=0.6, lnames=True)`
+
+Displays specific emission lines from the LA7 list on a plot. Useful for specific studies. Customize line appearance and annotation options.
+
+#### `show_restlines(lines, names, min_wave, max_wave, ypos=2.2e-20, xoffset=0.02e4, lnames=False, alpha=0.3)`
+
+Displays emission lines in the rest frame within a specified wavelength range. Customize line appearance and annotation options.
+
+## Example
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Redshift and wavelength range
+z_redshift = 0.7
+min_wavelength = 0.6e4
+max_wavelength = 5.3e4
+
+# Example plot
+plt.figure(figsize=(10, 5))
+plt.plot(np.linspace(min_wavelength, max_wavelength, 100), np.random.rand(100), label='Spectrum')
+
+# Overplot emission lines
+show_lines(lines_all, names_all, z_redshift)
+show_lines_LA7(lines_LA7, names_LA7, z_redshift)
+show_restlines(lines_paper, names_paper, min_wavelength, max_wavelength)
+
+plt.legend()
+plt.xlabel('Wavelength (Å)')
+plt.ylabel('Flux')
+plt.title('Spectrum with Overplotted Emission Lines')
+plt.show()
+```
+
+This example demonstrates how to use the module to overplot emission lines on a spectrum.
+
+Feel free to customize the code to suit your specific needs and integrate it into your analysis pipeline.
