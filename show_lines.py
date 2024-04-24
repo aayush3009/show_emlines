@@ -54,7 +54,36 @@ names_paper = [r"Ly$\alpha$", "[OII]", r"H$\beta$", "[OIII]", "[OIII]", r"H$\alp
 lines_gnz11 = [1215.670, 1486.5, 1748.6, 1909., 2800., 3727., 3868.8, 3967.5, 4101.7, 4340.471]
 names_gnz11 = [r"Ly$\alpha$", "NIV]", "NIII]", "CIII]", "MgII", "[OII]", "[NeIII]", "[NeIII]", r"H$\delta$", r"H$\gamma$"]
 
+### ALMA lines
+# Line names array
+ALMA_ISM_line_names = [
+    "[C II]", "[N II]", "[O III]", "[O I]", "[O I]"   
+    # Add other lines here if needed
+]
 
+# Rest frame wavelengths in microns array
+ALMA_ISM_lines = [
+    157.74, 205.18, 88.36, 145.52, 63.18  
+    # Add rest frame wavelengths of other lines here if needed
+]
+
+ALMA_CO_line_names = [
+    "CO(1-0)", "CO(2-1)", "CO(3-2)", "CO(4-3)", "CO(5-4)", "CO(6-5)", "CO(7-6)"
+]
+
+ALMA_CO_lines = [
+        2.60, 1.30, 0.87, 0.65, 0.52, 0.43, 0.37
+]
+
+ALMA_H2O_line_names = [
+    "H2O(1₁-0₁)", "H2O(2₁-1₂)", "H2O(3₁-2₂)", "H2O(4₁-3₂)", "H2O(5₁-4₂)",
+    "OH(2Π1/2 J = 3/2-1/2)", "OH(2Π3/2 J = 3/2-1/2)"
+]
+
+ALMA_H2O_lines = [
+        1113.343, 752.033, 489.346, 325.153, 213.235,
+    183.31, 161.63
+]
 
 
 ### Functions to display lines
@@ -93,4 +122,19 @@ def show_restlines(lines, names, min_wave, max_wave, c='k', ypos=2.2e-20, xoffse
         if lnames:
                 plt.text((lines[i] + xoffset), ypos, names[i], color=c, rotation=90, fontsize=fontsize)
             
+    return()
+
+
+def show_ALMA_lines(lines, names, z, min_freq=35e9, max_freq=950e9, c='k', ypos=1e-2, xoffset=3e9, alpha=0.3, frequency=True, lnames=False):
+    if frequency:
+        lines = (lines*u.micron).to(u.Hz, equivalencies=u.spectral()).value
+
+    for i in range(len(lines)):
+        if (lines[i]/(1+z)) < min_freq or (lines[i]/(1+z)) > max_freq:
+            continue
+        else:
+            plt.axvline((lines[i]/(1+z)), ls='--', c=c, alpha=alpha, zorder=3)
+            if lnames:
+                plt.text(((lines[i]/(1+z)) + xoffset), ypos, names[i], color=c, rotation=90, fontsize=fontsize)
+
     return()
