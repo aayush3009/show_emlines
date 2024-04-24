@@ -127,7 +127,7 @@ def show_restlines(lines, names, min_wave, max_wave, c='k', ypos=2.2e-20, xoffse
     return()
 
 
-def show_ALMA_lines(lines, names, z, min_freq=35e9, max_freq=950e9, c='k', ypos=1e-2, xoffset=3e9, alpha=0.3, frequency=True, lnames=False):
+def show_ALMA_lines(lines, names, z, min_freq=35e9, max_freq=950e9, c='k', ypos=1e-2, xoffset=3e9, alpha=0.3, frequency=True, lnames=False, fontsize=8):
     if frequency:
         lines = (lines*u.micron).to(u.Hz, equivalencies=u.spectral()).value
 
