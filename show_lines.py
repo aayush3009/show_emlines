@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
 
+import astropy.units as u
+
 ### LIST OF EMISSION LINES APPROPRIATE FOR VARIOUS SOURCES
 
 ### SDSS line list
