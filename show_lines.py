@@ -40,10 +40,10 @@ names_all = [r"Ly$\alpha$", "NV", "CIV", "HeII", "OIII]", "OIII]", "CIII]", "MgI
             r"H$\beta$", "[OIII]", "[OIII]", "[NII]", r"H$\alpha$", "[NII]", "[SII]", "[SII]", 
             "[SIII]", "[SIII]","Pag", "Pab", "Paa"]
 
-lines_lim = [1215.7, 1449., 1909., 2800., 3727., 3868.8, 3967.5, 4101.7, 4340.5,
+lines_lim = [1215.7, 1549., 1650. 1909., 2800., 3727., 3868.8, 3967.5, 4101.7, 4340.5,
          4861.3, 4958.9, 5007, 6562.8, 6583.4, 6716., 6731., 
          9069., 9531.1, 10830.340, 10938, 12820, 18750]
-names_lim = [r"Ly$\alpha$", "CIV", "CIII]", "MgII", "[OII]", "[NeIII]", "[NeIII]", r"H$\delta$", r"H$\gamma$",
+names_lim = [r"Ly$\alpha$", "CIV", "HeII+OIII]", "CIII]", "MgII", "[OII]", "[NeIII]", "[NeIII]", r"H$\delta$", r"H$\gamma$",
          r"H$\beta$", "[OIII]", "[OIII]", r"H$\alpha$", "[NII]", "[SII]", "[SII]", 
          "[SIII]", "[SIII]", "HeI", r"Pa$\gamma$", r"Pa$\beta$", r"Pa$\alpha$"]
 
