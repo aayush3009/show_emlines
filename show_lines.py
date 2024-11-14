@@ -115,7 +115,7 @@ def show_lines_LA7(lines, names, z, c='k', alpha=0.6, lnames=True):
             
     return()
 
-def show_restlines(lines, names, min_wave, max_wave, c='k', ypos=2.2e-20, xoffset=0.02e4, lnames=False, alpha=0.3):
+def show_restlines(lines, names, min_wave, max_wave, c='k', ypos=2.2e-20, xoffset=0.02e4, lnames=False, alpha=0.3, fontsize=8):
     for i in range(len(lines)):
         if lines[i] < min_wave or lines[i] > max_wave:
             continue
